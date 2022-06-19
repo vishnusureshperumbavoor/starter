@@ -2525,8 +2525,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #473bf0;
-  border-color: #473bf0;
+  background-color: #28a745;
+  border-color: #28a745;
 }
 .btn-primary:hover {
   color: #fff;
@@ -2536,8 +2536,8 @@ fieldset:disabled a.btn {
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #2617ed;
-  border-color: #2012e6;
+  background-color: #28a745;
+  border-color: #28a745;
   box-shadow: 0 0 0 0.2rem rgba(99, 88, 242, 0.5);
 }
 .btn-primary.disabled,
@@ -12845,7 +12845,7 @@ a.text-dark:focus {
 }
 
 :root {
-  --primary-color: #473bf0;
+  --primary-color: #28a745;
   --secondary-color: #68d585;
   --font-color: #666;
   --bg-color: #fff;
@@ -16264,7 +16264,7 @@ label.price-label {
   font-size: 18px;
   color: #fff;
   background: var(--primary-color);
-  padding: 5px 40px;
+  padding: 5px 47px;
   position: absolute;
   right: -30px;
   top: 11px;
