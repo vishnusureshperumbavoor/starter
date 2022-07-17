@@ -160,9 +160,10 @@ Author URL: http://w3layouts.com
             <div class="col-lg-7">
               <div class="map-content-9">
                 <h5 class="mb-4">Please feel free to contact us</h5>
+                <!-- action="https://sendmail.w3layouts.com/submitForm" -->
                 <form
-                  action="https://sendmail.w3layouts.com/submitForm"
                   method="post"
+                  name="google-sheet"
                 >
                   <div class="twice-two">
                     <input
@@ -172,6 +173,7 @@ Author URL: http://w3layouts.com
                       id="w3lName"
                       placeholder="Name"
                       required=""
+                      name="Name"
                     />
                     <input
                       type="email"
@@ -180,6 +182,7 @@ Author URL: http://w3layouts.com
                       id="w3lSender"
                       placeholder="Email"
                       required=""
+                      name="Email"
                     />
                   </div>
                   <div class="twice">
@@ -190,6 +193,7 @@ Author URL: http://w3layouts.com
                       id="w3lSubject"
                       placeholder="Subject"
                       required=""
+                      name="Subject"
                     />
                   </div>
                   <textarea
@@ -198,6 +202,7 @@ Author URL: http://w3layouts.com
                     id="w3lMessage"
                     placeholder="Message"
                     required=""
+                    name="Message"
                   ></textarea>
                   <div class="text-right">
                     <button
@@ -222,7 +227,7 @@ Author URL: http://w3layouts.com
                 </div>
                 <div class="cont-right">
                   <h6>Phone number</h6>
-                  <p><a href="tel:+91 8848788641">+91 8848788641</a></p>
+                  <p><a href="tel:+918848788641">+91 8848788641</a></p>
                 </div>
               </div>
               <div class="cont-top margin-up">
@@ -361,7 +366,7 @@ Author URL: http://w3layouts.com
       <section class="w3l-copyright text-center">
         <div class="container">
           <p class="copy-footer-29">
-            © COPYRIGHT 2022 ALL RIGHTS RESERVED 
+            © COPYRIGHT 2022 TRICHROMATIC
             <!-- Design by
             <a href="https://w3layouts.com/" target="_blank"> W3layouts</a> -->
           </p>
@@ -372,6 +377,43 @@ Author URL: http://w3layouts.com
           &#10548;
         </button>
         <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxDeRQcWgl9cJZFkWirTszeBtVrnLIjo_thXtU4Ystr4m22LZ3a5nx18RLzhJbxHmnXtQ/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(form),
+        })
+          .then((response) =>{
+            if (!alert("Form Added Successfully")) {
+          window.location.reload();
+          }
+        }
+          )
+          .catch((error) => console.error("error", error.message));
+      });
+
+
+      //   $("#submit-form").submit((e) => {
+      //   e.preventDefault();
+      //   $.ajax({
+      //     url: "https://script.google.com/macros/s/AKfycbxDeRQcWgl9cJZFkWirTszeBtVrnLIjo_thXtU4Ystr4m22LZ3a5nx18RLzhJbxHmnXtQ/exec",
+      //     data: $("#submit-form").serialize(),
+      //     method: "post",
+      //     success: function (response) {
+      //       alert("Form submitted successfully");
+      //       window.location.reload();
+      //       window.location.href="https://google.com"
+      //     },
+      //     error: function (err) {
+      //       alert("Something Error");
+      //     },
+      //   });
+      // });
+
           // When the user scrolls down 20px from the top of the document, show the button
           window.onscroll = function () {
             scrollFunction();
