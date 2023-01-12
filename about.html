@@ -59,17 +59,17 @@ Author URL: http://w3layouts.com
             <ul class="navbar-nav mx-lg-auto">
               <li class="nav-item @@home__active">
                 <a class="nav-link" href="index.html"
-                  >Home <span class="sr-only">(current)</span></a
+                  >HOME <span class="sr-only">(current)</span></a
                 >
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="about.html">ABOUT</a>
               </li>
               <li class="nav-item @@services__active">
-                <a class="nav-link" href="services.html">Services</a>
+                <a class="nav-link" href="services.html">SERVICES</a>
               </li>
               <li class="nav-item @@contact__active">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.html">CONTACT</a>
               </li>
             </ul>
 
@@ -127,7 +127,7 @@ Author URL: http://w3layouts.com
     <section class="w3l-about-breadcrumb">
       <div class="breadcrumb-bg breadcrumb-bg-about py-5">
         <div class="container py-lg-4 py-md-3">
-          <h2 class="title">About us</h2>
+          <h2 class="title">ABOUT US</h2>
           <!-- <ul class="breadcrumbs-custom-path">
                 <li><a href="index.html">Home</a></li>
                 <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> About page</li>
@@ -339,7 +339,7 @@ Author URL: http://w3layouts.com
     </section>
     <section class="w3l-content-6" id="skills">
       <!-- /content-6-section -->
-      <div class="content-6-mian py-5">
+      <!--<div class="content-6-mian py-5">
         <div class="container py-lg-5 py-md-4 py-2">
           <div class="content-info-in row">
             <div class="content-gd col-lg-6">
@@ -406,7 +406,7 @@ Author URL: http://w3layouts.com
       </div>
     </section>
     <!-- middle -->
-    <div class="middle py-5">
+    <!--<div class="middle py-5">
       <div class="container py-md-5 py-3">
         <div class="welcome-left text-center">
           <h3 class="title-big">
@@ -424,11 +424,11 @@ Author URL: http://w3layouts.com
 
         </div>
       </div>
-    </div>
+    </div>-->
     <!-- //middle -->
 
     <!-- <section class="w3l-team w31-grids-3" id="team"> -->
-    <!-- <section class="w3l-team w3l-bottom-grids" id="team">
+    <!--<section class="w3l-team w3l-bottom-grids" id="team">
       <div class="teams1 py-5 mb-3">
         <div class="container py-lg-3 pb-lg-5 pb-4">
           <div class="teams1-content">
@@ -682,10 +682,11 @@ Author URL: http://w3layouts.com
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
+    -->
     <!-- footer -->
     <!-- <section class="w3l-footer-29-main"> -->
-    <section class="w3l-content-6">
+    <section class="w3l-content-6 w3l-grids-3">
       <div class="footer-29 py-5">
         <div class="container py-lg-4">
           <div class="row footer-top-29">
@@ -736,13 +737,8 @@ Author URL: http://w3layouts.com
               class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-2 mt-sm-0 mt-5"
             >
               <ul>
-                <h6
-                  class="footer-title-29"
-                  style="
-                    font-weight: bold;
-                  "
-                >
-                  USEFUL LINKS
+                <h6 class="footer-title-29" style="font-weight: bold">
+                  SERVICES
                 </h6>
                 <br />
                 <li><a href="about.html">About Us</a></li>
@@ -755,13 +751,8 @@ Author URL: http://w3layouts.com
             <div
               class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-3 mt-lg-0 mt-5"
             >
-              <h6
-                class="footer-title-29"
-                style="
-                  font-weight: bold;
-                "
-              >
-                RESOURCES
+              <h6 class="footer-title-29" style="font-weight: bold">
+                PRODUCTS
               </h6>
               <br />
               <ul>
@@ -775,12 +766,7 @@ Author URL: http://w3layouts.com
             <div
               class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5"
             >
-              <h6
-                class="footer-title-29"
-                style="
-                  font-weight: bold;
-                "
-              >
+              <h6 class="footer-title-29" style="font-weight: bold">
                 CONTACT INFO
               </h6>
               <br />
@@ -981,15 +967,15 @@ Author URL: http://w3layouts.com
 
     <!--/MENU-JS-->
     <script>
-        $(window).on("scroll", function () {
-          var scroll = $(window).scrollTop();
+      $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
 
-          if (scroll >= 80) {
-            $("#site-header").addClass("nav-fixed");
-          } else {
-            $("#site-header").removeClass("nav-fixed");
-          }
-        });
+        if (scroll >= 80) {
+          $("#site-header").addClass("nav-fixed");
+        } else {
+          $("#site-header").removeClass("nav-fixed");
+        }
+      });
 
       //Main navigation Active Class Add Remove
       $(".navbar-toggler").on("click", function () {
