@@ -1099,7 +1099,7 @@ relationships.
               <div class="map-content-9">
                 <h5 class="mb-4">Please feel free to contact us</h5>
                 <!-- action="https://sendmail.w3layouts.com/submitForm" -->
-                <form method="post" 
+                <form method="post" name="google-sheet"
                 action="https://script.google.com/macros/s/AKfycbyz5QJpKw2DJ8bbuG4lNufWj346C46v9lRTLvFqBaW_yBDr7ztS4ixi0RFLcBZ8YUEa/exec">
                   <div class="twice-two">
                     <input
@@ -1140,6 +1140,7 @@ relationships.
                     <button
                       type="submit"
                       class="btn btn-primary btn-style mt-4"
+                      onclick="myFunction()"
                     >
                       Send Message
                     </button>
@@ -1351,7 +1352,7 @@ relationships.
             © COPYRIGHT 2023 ALL RIGHTS RESERVED
              <!-- Design by
             <a href="https://w3layouts.com/" target="_blank"> VSP</a> -->
-            
+      
           </p>
         </div>
 
@@ -1360,6 +1361,26 @@ relationships.
           &#10548;
         </button>
         <script>
+          function myFunction() {
+        if(!alert('Form Added Successfully')){
+          window.location.reload();
+        }
+      }
+      const scriptURL ="https://script.google.com/macros/s/AKfycbyz5QJpKw2DJ8bbuG4lNufWj346C46v9lRTLvFqBaW_yBDr7ztS4ixi0RFLcBZ8YUEa/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(form),
+        })
+          .then((response) =>
+            // alert('Form added successfully') &&
+            window.location.reload()
+          )
+          .catch((error) => console.error("error", error.message));
+      });
           // When the user scrolls down 20px from the top of the document, show the button
           window.onscroll = function () {
             scrollFunction();
