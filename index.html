@@ -20,6 +20,7 @@ Author URL: http://w3layouts.com
       href="//fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css" />
@@ -176,7 +177,7 @@ Author URL: http://w3layouts.com
               </h3>
             </div>
             <div class="col-lg-12 col-sm-12 mt-lg-12 mt-12">
-              <p class="mb-3" style="text-align: left;">
+              <p class="mb-3" style="text-align: justify;">
                 <strong>TRICHROMATIC</strong> is a social enterprise working with formal waste pickers and bulk waste generators to create inclusive, 
                 financially viable and environmentally sustainable waste management models. Simply put, we help you divert waste from 
                 the landfill to green end-points. We are an independent waste management service, and we can offer you professional 
@@ -334,8 +335,12 @@ Author URL: http://w3layouts.com
               <h3 class="title-big text-center">
                 RRR Principles
               </h3>
-              <p class="mt-3" style="text-align: left;">
-                We strongly believe in the RRR principles of Reduce, Reuse & Recycle concept. We have develped an eco-composting system to reduce the biodegrable waste. Working to meet the needs of all our clients on an individual basis, we offer tailored sevices to assist with the management, storage, collection and disposal of waste. We waste with clients across a range of sectors to help then deal with all types of waste. We have a large space of Material Recovery Facility Centre for Recuse & Recycle of non-biodegradable items. Through RRR principles, we create a Zero waste revolution for descendants.  
+              <p class="mt-3" style="text-align: justify;">
+                We strongly believe in the RRR principles of Reduce, Reuse & Recycle concept. We have develped an eco-composting system to reduce the 
+                biodegrable waste. Working to meet the needs of all our clients on an individual basis, we offer tailored sevices to assist with the 
+                management, storage, collection and disposal of waste. We waste with clients across a range of sectors to help then deal with all types of 
+                waste. We have a large space of Material Recovery Facility Centre for Recuse & Recycle of non-biodegradable items. Through RRR principles, 
+                we create a Zero waste revolution for descendants.  
               </p>
             </div>
             <!-- <div class="history-info mt-5">
@@ -387,12 +392,11 @@ Author URL: http://w3layouts.com
           <div class="row">
             <div class="col-lg-12 align-self">
               <h3 class="title-big text-center">TRICHROMATIC VALUES</h3>
-              <p class="mt-4" style="text-align:left">
-                Of course, underlying all of these ambitions are a new set of values which underpins everything
-we do. So what are Trichromatic people like? If you are joining the Trichromatic team, what can
-you expect from us as a business. These values - which were co-created with our people - should
-give you a flavour. What we deliver is important, but so is how we deliver it.
-<br>
+              <p class="mt-4" style="text-align:justify">
+                Of course, underlying all of these ambitions are a new set of values which underpins everything we do. So what are Trichromatic people like? 
+                If you are joining the Trichromatic team, what can you expect from us as a business. These values - which were co-created with our people - 
+                should give you a flavour. What we deliver is important, but so is how we deliver it.
+                <br>
               </p>
               <ul class="cont-4 mt-4">
                 
@@ -976,8 +980,7 @@ relationships.
             <div class="col-lg-7">
               <div class="map-content-9">
                 <h5 class="mb-4">Please feel free to contact us</h5>
-                <!-- action="https://sendmail.w3layouts.com/submitForm" -->
-                <form method="post" name="google-sheet">
+                <form name="submit-form" method="post">
                   <div class="twice-two">
                     <input
                       type="text"
@@ -1064,8 +1067,7 @@ relationships.
                 <div class="cont-right">
                   <h6>Company Address</h6>
                   <p class="pr-lg-5">
-                    11/336, E - Chelamattom, Okkal P.O, Perumbavoor, Ernakulam,
-                    Kerala, India - 683550
+                    11/7A, Juma Masjid Building, Vallam Canal Band Road, Perumbavoor, Chelamattom, Koovappady, Ernakulam, Kerala, India - 683550
                   </p>
                 </div>
               </div>
@@ -1164,7 +1166,7 @@ relationships.
                 <a href="https://www.instagram.com/trichromaticgroup/" class="instagram" target="_blank"
                   ><span class="fa fa-instagram" style="color:white"></span
                 ></a>
-                <a href="https://wa.me/+918848788641?text=urlencodedtext" class="instagram" target="_blank"
+                <a href="https://wa.me/+918848788641/" class="instagram" target="_blank"
                   ><span class="fa fa-whatsapp" style="color:white"></span
                 ></a>
                 <!-- <a href="#linkedin" class="linkedin"
@@ -1266,6 +1268,8 @@ relationships.
     <!-- Template JavaScript -->
 
     
+
+    
     
     <script src="assets/js/theme-change.js"></script>
     <!-- theme switch js (light and dark)-->
@@ -1282,6 +1286,30 @@ relationships.
       $(".counter").countUp();
     </script>
     <!-- //stats number counter -->
+
+    <!-- form submission -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    function myFunction() {
+      if (!alert('Form Added Successfully')) {
+        window.location.reload();
+      }
+    }
+    const scriptURL ="https://script.google.com/macros/s/AKfycbw397Jh1UXXqItSThfMPY-JhEr49FYsaaM2gStPtkGsPlswYAbYugRjOxf3MVzO7FjUmQ/exec";
+    const form = document.forms["submit-form"]; 
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+      })
+        .then((response) =>
+          window.location.reload()
+        )
+        .catch((error) => console.error("error", error.message));
+    });
+  </script>
 
     <!-- owlcarousel -->
     <script src="assets/js/owl.carousel.js"></script>
